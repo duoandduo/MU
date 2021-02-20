@@ -50,7 +50,7 @@
       height: 126px;
     }
     .price{
-        font-size: ;
+        font-size: 18px;
     }
 
     .discount {

@@ -11,6 +11,11 @@ const routes = [
     component: index,
     children: [
       {
+        path: 'home', // 新闻详情
+        name:'home',
+        component: () => import('@/views/Home/home'), 
+      },
+      {
         path: 'shop', // 新闻详情
         name:'shop',
         component: () => import('@/views/Shop/shop'), 
