@@ -26,7 +26,7 @@ const routes = [
         component: () => import('@/views/Freeplay/freeplay'), 
       },
       {
-        path: 'my', // 新闻详情
+        path: 'my', // 我的面板
         name:'my',
         component: () => import('@/views/My/my'), 
       },
