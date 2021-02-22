@@ -14,32 +14,36 @@
             :key="index"
           >
             <v-list-item-content>
-              <v-list-item-title v-text="item.routeTitle"></v-list-item-title>
+              <v-list-item-title v-text="item.routeTitle" @click="replaceContent(item.url)"></v-list-item-title>
             </v-list-item-content>
           </v-list-item>
         </v-list-item-group>
       </v-list>
     </v-card>
-    <v-card class="mu-my-right"></v-card >
+    <v-card class="mu-my-right">
+      <router-view></router-view>
+    </v-card>
   </div>
 </template>
 
 <script>
+
 export default {
   name: 'My',
   mounted() {
-    
+
   },
   data() {
     return {
       isMobile: false,
       selectedItem: 0,
-      menuList: [{ routeTitle: '我的游戏', url: '/My/Games', icon: 'game' }, { routeTitle: '我的订单', url: '/My/Games', icon: 'game' }, { routeTitle: '我的钱包', url: '/My/Games', icon: 'game' }, { routeTitle: '售后退款', url: '/My/Games', icon: 'game' }, { routeTitle: '激活码兑换', url: '/My/Games', icon: 'game' }, { routeTitle: '帮助中心', url: '/My/Games', icon: 'game' }, { routeTitle: '辅助工具', url: '/My/Games', icon: 'game' }, { routeTitle: '邀请有礼', url: '/My/Games', icon: 'game' }, ]
+      timer: null,
+      menuList: [{ routeTitle: '我的游戏', url: '/My/Games', icon: 'game' }, { routeTitle: '我的订单', url: '/My/Orders', icon: 'game' }, { routeTitle: '我的钱包', url: '/My/Games', icon: 'game' }, { routeTitle: '售后退款', url: '/My/Games', icon: 'game' }, { routeTitle: '激活码兑换', url: '/My/Games', icon: 'game' }, { routeTitle: '帮助中心', url: '/My/Games', icon: 'game' }, { routeTitle: '辅助工具', url: '/My/Games', icon: 'game' }, { routeTitle: '邀请有礼', url: '/My/Games', icon: 'game' }, ]
     }
   },
   methods: {
     replaceContent(url) {
-      this.$router.replace(url);
+      this.$route.path !== url && this.$router.replace(url);
     }
   }
 }

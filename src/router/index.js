@@ -27,8 +27,21 @@ const routes = [
       },
       {
         path: 'my', // 我的面板
+        redirect: '/my/Games',
         name:'my',
         component: () => import('@/views/My/my'), 
+        children: [
+          {
+            path: 'Games',
+            component: () => import('@/views/My/comp/MyGames'),
+          },{
+            path: 'Orders',
+            component: () => import('@/views/My/comp/MyOrders'), 
+          },{
+            path: 'Wallet',
+            component: () => import('@/views/My/comp/MyWallet'), 
+          }
+        ]
       },
     ]
   },
