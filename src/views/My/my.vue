@@ -38,7 +38,15 @@ export default {
       isMobile: false,
       selectedItem: 0,
       timer: null,
-      menuList: [{ routeTitle: '我的游戏', url: '/My/Games', icon: 'game' }, { routeTitle: '我的订单', url: '/My/Orders', icon: 'game' }, { routeTitle: '我的钱包', url: '/My/Games', icon: 'game' }, { routeTitle: '售后退款', url: '/My/Games', icon: 'game' }, { routeTitle: '激活码兑换', url: '/My/Games', icon: 'game' }, { routeTitle: '帮助中心', url: '/My/Games', icon: 'game' }, { routeTitle: '辅助工具', url: '/My/Games', icon: 'game' }, { routeTitle: '邀请有礼', url: '/My/Games', icon: 'game' }, ]
+      menuList: [
+        { routeTitle: '我的游戏', url: '/My/Games', icon: 'game' }, 
+        { routeTitle: '我的订单', url: '/My/Orders', icon: 'game' }, 
+        { routeTitle: '我的钱包', url: '/My/Wallet', icon: 'game' }, 
+        { routeTitle: '售后退款', url: '/My/Refund', icon: 'game' }, 
+        { routeTitle: '激活码兑换', url: '/My/Exchange', icon: 'game' }, 
+        { routeTitle: '帮助中心', url: '/My/Help', icon: 'game' }, 
+        { routeTitle: '辅助工具', url: '/My/Tool', icon: 'game' }, 
+        { routeTitle: '邀请有礼', url: '/My/Invite', icon: 'game' }]
     }
   },
   methods: {
@@ -50,12 +58,9 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-$r: mu-my;
-$radix: 1 / 20 * 1rem;
+@import url("../../assets/scss/common.scss");
 
-@function pxToPem($px) {
-  @return $px * $radix;
-}
+$r: mu-my;
 
 .#{$r} {
   display: flex;

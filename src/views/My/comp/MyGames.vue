@@ -1,6 +1,9 @@
 <template>
   <div class="mu-mygames">
-    <noAuth v-if="isLogin" />
+    <noAuth v-if="!isLogin" />
+    <template v-if="isLogin" >
+      
+    </template>
   </div>
 </template>
 
