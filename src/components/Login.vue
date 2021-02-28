@@ -32,7 +32,7 @@
         <v-btn
           color="primary"
           text
-          @click="dialog = false"
+          @click="submit"
         >
           登录
         </v-btn>
@@ -52,8 +52,13 @@ export default {
   methods: {
     handleClose() {
       this.$emit('close');
+    },
+    submit() {
+      this.$store.commit('setUserInfo', { name: 'abc' });
+      console.log(this.$store.getters.isLogin);
+      this.handleClose();
     }
-  }
+  },
 }
 </script>
 

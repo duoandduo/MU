@@ -9,6 +9,7 @@
 
 <script>
 import noAuth from './noAuth';
+import { mapGetters } from 'vuex';
 
 export default {
   name: 'MyGames',
@@ -17,8 +18,12 @@ export default {
   },
   data() {
     return {
-      isLogin: false
     }
+  },
+  computed: {
+    ...mapGetters([
+      'isLogin',
+    ])
   },
   created() {
     
