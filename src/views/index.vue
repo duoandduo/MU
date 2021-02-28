@@ -60,6 +60,7 @@ export default {
   }
 }
 .main {
+  min-height: 100%;
   background: url('../assets/img/bg-94b7f6b3.png');
   background-repeat: no-repeat;
   background-size: 100% 100%;
