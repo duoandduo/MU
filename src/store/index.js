@@ -5,7 +5,7 @@ Vue.use(Vuex)
 
 export default new Vuex.Store({
   state: {
-    userInfo: null
+    userInfo: {}
   },
   mutations: {
     setUserInfo: (state, payload) => state.userInfo = payload

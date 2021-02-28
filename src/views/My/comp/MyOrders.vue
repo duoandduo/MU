@@ -1,5 +1,10 @@
 <template>
-  <div>order</div>
+  <div>
+    <noAuth v-if="!isLogin" />
+    <template v-if="isLogin" >
+      orders
+    </template>
+  </div>
 </template>
 
 <script>
