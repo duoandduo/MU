@@ -9,16 +9,17 @@ const routes = [
     path: '/',
     name: 'index',
     component: index,
-    children: [
-      {
-        path: 'home', // 新闻详情
-        name:'home',
-        component: () => import('@/views/Home/home'), 
-      },
+    children: [ 
       {
         path: 'shop', // 新闻详情
         name:'shop',
         component: () => import('@/views/Shop/shop'), 
+        children: [
+          {
+            path: 'Home',
+            component: () => import('@/views/Shop/comp/home'),
+          },
+        ]
       },
       {
         path: 'freeplay', // 新闻详情

@@ -3,7 +3,7 @@
     <v-app-bar app color="#cf2524" dark class="top_bar">
       <div class="d-flex align-center">
         <v-img @click="toPage('/home')" alt="Vuetify Logo" class="shrink mr-2" contain src="https://cdn.vuetifyjs.com/images/logos/vuetify-logo-dark.png" transition="scale-transition" width="40" />
-        <span class="mr-2" @click="toPage('/shop')">商城</span>
+        <span class="mr-2" @click="toPage('/shop/home')">商城</span>
         <span class="mr-2" @click="toPage('/freeplay')">试玩</span>
         <span class="mr-2" @click="toPage('/my')">我的</span> 
       </div>
@@ -15,15 +15,18 @@
         <span class="mr-2">下载客户端</span> 
       <!-- </v-btn> -->
     </v-app-bar>
-    <v-main> 
+    <v-main>  
+      <NavMenu></NavMenu>
       <router-view></router-view>
     </v-main >
   </v-app>
 </template>
 
 <script>
+import NavMenu from '@/views/Nav/nav'
   export default {
     name: "Index",
+    components:{NavMenu},
     data() {
       return {
         
