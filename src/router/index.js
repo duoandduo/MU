@@ -11,13 +11,25 @@ const routes = [
     component: index,
     children: [ 
       {
-        path: 'shop', // 新闻详情
+        path: 'Shop', // 新闻详情
         name:'shop',
         component: () => import('@/views/Shop/shop'), 
         children: [
           {
             path: 'Home',
             component: () => import('@/views/Shop/comp/home'),
+          },{
+            path: 'GameList',
+            component: () => import('@/views/Shop/comp/gameList'),
+          },{
+            path: 'Phonegamelist',
+            component: () => import('@/views/Shop/comp/gameList'), 
+          },{
+            path: 'Localgamelist',
+            component: () => import('@/views/Shop/comp/gameList'),
+          },{
+            path: 'cdk',
+            component: () => import('@/views/Shop/comp/gameList'),
           },
         ]
       },

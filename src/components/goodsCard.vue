@@ -1,9 +1,9 @@
 <template>
-  <v-card class="mx-auto goodsCard" width="286">
+  <v-card class="mx-auto goodsCard mb-4" width="286">
     <v-img src="https://cdn.vuetifyjs.com/images/cards/house.jpg" :aspect-ratio="16/9">
     </v-img>
     <v-card-text class="py-2">
-      <div class="mb-2">
+      <div >
         赛博朋克2077
       </div>
     </v-card-text>

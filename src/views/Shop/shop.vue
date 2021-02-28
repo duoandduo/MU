@@ -1,6 +1,5 @@
 <template>
   <div class="shop"> 
-    
     <router-view></router-view>
   </div>
 </template>
@@ -15,5 +14,8 @@
 </script>
 
 <style lang='scss' scoped>
-
+.shop{
+  max-width: 1200px;
+  margin: 0 auto;
+}
 </style>
