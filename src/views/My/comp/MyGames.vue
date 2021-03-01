@@ -53,6 +53,7 @@
           <span class="mu-mygames-topbar-title">更多</span >
         </v-btn>
       </div>
+      <GameList class="mu-mygames-gamelist" :games-data="[1, 2, 3]" />
       <div class="mu-mygames-input">
         <!-- <v-text-field label="Another input"></v-text-field> -->
       </div>
@@ -62,12 +63,14 @@
 
 <script>
 import noAuth from './noAuth';
+import GameList from './GameList';
 import { mapGetters } from 'vuex';
 
 export default {
   name: 'MyGames',
   components: {
-    noAuth
+    noAuth,
+    GameList
   },
   data() {
     return {
@@ -92,10 +95,16 @@ $r: mu-mygames;
     padding: 30px 50px;
     &-btn {
       margin-left: 10px;
+      margin-bottom: 10px;
     }
     &-title {
       margin-left: 5px;
     }
+  }
+  &-gamelist {
+    margin: 10px 60px;
+    min-height: 480px;
+    background-color: #E6F7FF;
   }
 }
 
