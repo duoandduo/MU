@@ -32,12 +32,13 @@
         <v-btn
           color="primary"
           text
-          @click="dialog = false"
+          @click="submit"
         >
           登录
         </v-btn>
       </v-card-actions>
     </v-card>
+    <v-snackbar v-model="isShowSnackbar" :timeout="hideSnackbarTime">登录成功</v-snackbar>
   </div>
 </template>
 
@@ -46,14 +47,22 @@ export default {
   name: 'Login',
   data() {
     return {
-      
+      isShowSnackbar: false,
+      hideSnackbarTime: 1000
     }
   },
   methods: {
     handleClose() {
       this.$emit('close');
+    },
+    submit() {
+      this.isShowSnackbar = true;
+      setTimeout(() => {
+        this.$store.commit('setUserInfo', { name: 'abc' });
+        this.handleClose();
+      }, 1000)
     }
-  }
+  },
 }
 </script>
 

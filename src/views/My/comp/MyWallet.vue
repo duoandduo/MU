@@ -1,5 +1,10 @@
 <template>
-  <div>wallet</div>
+  <div>
+    <noAuth v-if="!isLogin" />
+    <template v-if="isLogin" >
+      wallet
+    </template>
+  </div>
 </template>
 
 <script>
