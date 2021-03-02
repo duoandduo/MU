@@ -8,15 +8,16 @@ const routes = [
   {
     path: '/',
     name: 'index',
+    redirect: '/home',
     component: index,
     children: [
       {
-        path: 'home', // 新闻详情
+        path: 'home', // 首页
         name:'home',
         component: () => import('@/views/Home/home'), 
       },
       {
-        path: 'shop', // 新闻详情
+        path: 'shop', // 商城
         name:'shop',
         component: () => import('@/views/Shop/shop'), 
       },

@@ -3,7 +3,7 @@
     <v-app-bar app color="#cf2524" dark class="top_bar">
       <div class="d-flex align-center">
         <v-img @click="toPage('/home')" alt="Vuetify Logo" class="shrink mr-2" contain src="https://cdn.vuetifyjs.com/images/logos/vuetify-logo-dark.png" transition="scale-transition" width="40" />
-        <span class="mr-2" @click="toPage('/shop')">商城</span>
+        <span class="mr-2" @click="toPage('/home')">商城</span>
         <span class="mr-2" @click="toPage('/freeplay')">试玩</span>
         <span class="mr-2" @click="toPage('/my')">我的</span> 
       </div>
@@ -22,17 +22,19 @@
 </template>
 
 <script>
+import { common } from '../components/mixins/public'
   export default {
     name: "Index",
+    mixins:[common],
     data() {
       return {
         
       }
     },
     methods: {
-      toPage(url) {
-        this.$router.push(url)
-      }
+      // toPage(url) {
+      //   this.$router.push(url)
+      // }
     }
   }
 </script>

@@ -22,7 +22,12 @@
         </div>
         <div class="content">{{gamebCarousel[carouselIndex].describe}}</div>
       </div>
-
+    </div>
+    <div class="vip_buy d-flex">
+      <div class="tag"></div>
+      <div>MU 会员</div>
+      <div>全场游戏免费玩，购买商品折上减现 <span>等超豪特权等你来！</span><br><span>更多会员特权</span></div>
+      <div><span>￥98/年</span><br><span>低至0.27元/天</span></div>
     </div>
     <div class="good_card_title">热销商品</div>
     <v-row justify="space-around">
@@ -94,6 +99,8 @@
 
 <style lang='scss' scoped>
   .home {
+    background:url('../../assets/img/bg-94b7f6b3.png') repeat;
+    background-size: 100%;
     .good_card_title {
       height: 100px;
       line-height: 100px;
@@ -141,6 +148,23 @@
             background: #fff;
           }
         }
+      }
+    }
+    .vip_buy{
+      position: relative;
+      background: url('../../assets/img/banner-vip.png');
+      background-size: 100%;
+      height: 120px;
+      margin-top: 40px;
+      cursor: pointer;
+      .tag{
+        position: absolute;
+        top: 0;
+        right: 0;
+        background:url('../../assets/img/timeTag.png');
+        background-size: 100%;
+        height: 64px;
+        width: 64px;
       }
     }
   }
