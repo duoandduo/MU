@@ -4,7 +4,7 @@
     <ul class="d-flex align-center pa-0">
       <li
         @click="toPage(item.path)"
-        :class="{ active: index == 0 }"
+        :class="{ active: activeKey == item.key }"
         v-for="(item, index) in list"
         :key="index"
       >
@@ -17,32 +17,43 @@
 <script>
 export default {
   data() {
-    return {
+    return { 
+      activeKey:'home',
       list: [
         {
           title: "首页",
           path: "Home",
+          key:'home'
         },
         {
           title: "电脑游戏",
           path: "GameList",
+          key:'gameList'
         },
         {
           title: "手机游戏",
           path: "Phonegamelist",
+          key:'phonegamelist'
         },
         {
           title: "主机游戏",
           path: "Localgamelist",
+          key:'localgamelist'
         },
         {
           title: "充值中心",
           path: "cdk",
+          key:'cdk'
         },
       ],
       seachKey: "111",
     };
   },
+  watch:{
+    '$route' (){
+      this.activeKey=this.$route.meta.key
+    }
+  }, 
   methods: {
     toPage(url) {
       this.$router.push(url);

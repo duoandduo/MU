@@ -23,7 +23,7 @@
         <div class="content">{{gamebCarousel[carouselIndex].describe}}</div>
       </div>
     </div>
-    <div class="vip_buy d-flex">
+    <div @click="toPage('Vip')" class="vip_buy d-flex">
       <div class="tag"></div>
       <div>MU 会员</div>
       <div>全场游戏免费玩，购买商品折上减现 <span>等超豪特权等你来！</span><br><span>更多会员特权</span></div>

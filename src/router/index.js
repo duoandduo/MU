@@ -19,18 +19,33 @@ const routes = [
           {
             path: 'Home',
             component: () => import('@/views/Shop/comp/home'),
+            meta:{
+              key:'home'
+            }
           },{
             path: 'GameList',
             component: () => import('@/views/Shop/comp/gameList'),
+            meta:{
+              key:'gameList'
+            }
           },{
             path: 'Phonegamelist',
             component: () => import('@/views/Shop/comp/gameList'), 
+            meta:{
+              key:'phonegamelist'
+            }
           },{
             path: 'Localgamelist',
             component: () => import('@/views/Shop/comp/gameList'),
+            meta:{
+              key:'localgamelist'
+            }
           },{
             path: 'cdk',
             component: () => import('@/views/Shop/comp/gameList'),
+            meta:{
+              key:'cdk'
+            }
           },
         ]
       },
@@ -57,6 +72,11 @@ const routes = [
           }
         ]
       },
+      {
+        path: 'Vip', // 新闻详情
+        name:'Vip',
+        component: () => import('@/views/Vip/vip'), 
+      }, 
     ]
   },
   // {

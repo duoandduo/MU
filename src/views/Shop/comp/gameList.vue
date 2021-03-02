@@ -1,7 +1,7 @@
 <template>
   <div class="gameList">
     <div class="pageTitle">
-      <v-breadcrumbs color="black" :items="items"></v-breadcrumbs>
+      <v-breadcrumbs color="#000" :items="items"></v-breadcrumbs>
     </div>
     <div class="choose" v-if="cardType == 1">
       <div
@@ -157,8 +157,8 @@ export default {
       color: #cf2524;
     }
   }
-  .v-application a {
-    color: #000;
+  .v-breadcrumbs__item {
+    color: #000 !important;
   }
   .v-breadcrumbs {
     padding: 8px 12px;
