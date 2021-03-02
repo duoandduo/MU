@@ -3,8 +3,8 @@
     <v-icon x-large color="orange darken-2" class="mu-noauth-icon" >info</v-icon>
     <p class="mu-noauth-span">您还未登录,请您前往登录</p>
     <v-btn class="mu-noauth-btn" color="orange darken-3" @click="handleLogin">前往登录</v-btn>
-    <v-dialog v-model="LoginDialogVisible" width="400">
-      <Login />
+    <v-dialog v-model="LoginDialogVisible" width="450">
+      <Login @close="LoginDialogVisible = false" />
     </v-dialog>
   </div>
 </template>

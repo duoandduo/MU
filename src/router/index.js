@@ -10,16 +10,29 @@ const routes = [
     name: 'index',
     redirect: '/home',
     component: index,
-    children: [
+    children: [ 
       {
-        path: 'home', // 首页
-        name:'home',
-        component: () => import('@/views/Home/home'), 
-      },
-      {
-        path: 'shop', // 商城
+        path: 'Shop', // 新闻详情
         name:'shop',
         component: () => import('@/views/Shop/shop'), 
+        children: [
+          {
+            path: 'Home',
+            component: () => import('@/views/Shop/comp/home'),
+          },{
+            path: 'GameList',
+            component: () => import('@/views/Shop/comp/gameList'),
+          },{
+            path: 'Phonegamelist',
+            component: () => import('@/views/Shop/comp/gameList'), 
+          },{
+            path: 'Localgamelist',
+            component: () => import('@/views/Shop/comp/gameList'),
+          },{
+            path: 'cdk',
+            component: () => import('@/views/Shop/comp/gameList'),
+          },
+        ]
       },
       {
         path: 'freeplay', // 新闻详情
