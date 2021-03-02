@@ -99,7 +99,7 @@
 
 <style lang='scss' scoped>
   .home {
-    background:url('../../assets/img/bg-94b7f6b3.png') repeat;
+    background:url('../../../assets/img/bg-94b7f6b3.png') repeat;
     background-size: 100%;
     .good_card_title {
       height: 100px;
@@ -152,7 +152,7 @@
     }
     .vip_buy{
       position: relative;
-      background: url('../../assets/img/banner-vip.png');
+      background: url('../../../assets/img/banner-vip.png'); 
       background-size: 100%;
       height: 120px;
       margin-top: 40px;
@@ -161,7 +161,7 @@
         position: absolute;
         top: 0;
         right: 0;
-        background:url('../../assets/img/timeTag.png');
+        background:url('../../../assets/img/timeTag.png');
         background-size: 100%;
         height: 64px;
         width: 64px;

@@ -39,6 +39,7 @@ import NavMenu from "@/views/Nav/nav";
   export default {
     name: "Index",
     mixins:[common],
+  components: { NavMenu },
     data() {
       return {
         
