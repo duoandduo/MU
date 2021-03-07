@@ -4,7 +4,7 @@
     <template v-if="isLogin" >
       <div class="mu-mywallet-card">
         <span>我的余额 : 0.00 元</span>
-        <v-btn color="#3692FC" small class="mu-mywallet-card-btn">我的支付宝</v-btn >
+        <v-btn color="#3692FC" small class="mu-mywallet-card-btn" @click="bindDialogVisible = true">我的支付宝</v-btn >
         <v-btn color="#FFF0E6" small class="mu-mywallet-card-btn">提现</v-btn>
       </div>
       <div class="mu-mywallet-search">
@@ -56,6 +56,7 @@
             class="elevation-1"
           ></v-data-table>
       </div>
+      <v-dialog v-model="bindDialogVisible" width="450"></v-dialog>
     </template>
   </div>
 </template>
@@ -80,8 +81,8 @@ export default {
           { text: '变动后金额', value: 'carbs' },
           { text: '备注', value: 'protein' },
           { text: '操作', value: 'iron' },
-        ],
-        desserts: [
+      ],
+      desserts: [
           {
             name: '20200202',
             calories: '试玩游戏',
@@ -162,7 +163,8 @@ export default {
             protein: 7,
             iron: '6%',
           },
-        ],
+      ],
+      bindDialogVisible: false
     }
   },
   computed: {

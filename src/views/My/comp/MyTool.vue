@@ -72,7 +72,27 @@
     </div >
     <div class="mu-mytool-toollist">
       <div class="mu-mytool-title">辅助工具合集</div>
-      <div class="mu-mytool-toollist-content"></div>
+      <div class="mu-mytool-toollist-content">
+        <v-card
+          class="mu-mytool-toollist-left"
+        >
+          <a href="#" v-for="i in 5" :key="i" class="mu-mytool-toollist-link">某个特殊的辅助工具 {{ i }} 2020-03-0{{ i }} 点击查看</a>
+        </v-card>
+        <v-card
+          class="mu-mytool-toollist-right"
+        >
+          <div class="mu-mytool-toollist-card">
+            <div class="mu-mytool-toollist-card-icon" style="background: #5DA9F6">
+              <v-icon x-large color="#FFF">mdi-tools</v-icon >
+            </div >
+            <div class="mu-mytool-toollist-card-content">
+              <div class="mu-mytool-toollist-card-title">游戏组件修复</div >
+              <div class="mu-mytool-toollist-card-description">检测修复游戏环境</div >
+            </div>
+            <v-btn class="mu-mytool-toollist-card-btn" color="primary" small>一键修复</v-btn>
+          </div >
+        </v-card>
+      </div>
     </div >
   </div >
 </template>
@@ -120,6 +140,60 @@ $r: mu-mytool;
       &-link {
         font-size: 14px;
         text-decoration: none;
+      }
+    }
+  }
+  &-toollist {
+    &-content {
+      display: flex;
+    }
+    &-link {
+      display: block;
+      text-decoration: none;
+      color: #000;
+      padding: 10px;
+      border-bottom: 1px solid #F3F3F3;
+      &:hover {
+        background-color: #E3E3E3;
+        color: #FFF;
+      }
+    }
+    &-left {
+      flex: 1;
+      min-width: 500px;
+      min-height: 360px;
+      margin-top: 10px;
+      padding: 20px;
+    }
+    &-right {
+      margin-left: 20px;
+      width: 300px;
+      height: 360px;
+      padding: 20px 10px;
+      margin-top: 10px;
+    }
+    &-card {
+      display: flex;
+      justify-content: space-between;
+      border-bottom: 1px solid #E4E4E4;
+      padding-bottom: 10px;
+      &-icon {
+        width: 70px;
+        height: 70px;
+        line-height: 4;
+        text-align: center;
+        border-radius: 35px;
+      }
+      &-title {
+        font-size: 15px;
+        font-weight: bold;
+      }
+      &-description {
+        margin-top: 12px;
+        font-size: 12px;
+      }
+      &-btn {
+        margin-top: 18px;
       }
     }
   }
