@@ -4,6 +4,11 @@ import index from '../views/index.vue'
 
 Vue.use(VueRouter)
 
+const originalPush = VueRouter.prototype.push
+VueRouter.prototype.push = function push (location) {
+  return originalPush.call(this, location).catch(err => err)
+}
+
 const routes = [
   {
     path: '/',
@@ -69,6 +74,21 @@ const routes = [
           },{
             path: 'Wallet',
             component: () => import('@/views/My/comp/MyWallet'), 
+          },{
+            path: 'Refund',
+            component: () => import('@/views/My/comp/MyRefund'),
+          },{
+            path: 'Exchange',
+            component: () => import('@/views/My/comp/MyExchange'), 
+          },{
+            path: 'Help',
+            component: () => import('@/views/My/comp/MyHelp'), 
+          },{
+            path: 'Tool',
+            component: () => import('@/views/My/comp/MyTool'), 
+          },{
+            path: 'Invite',
+            component: () => import('@/views/My/comp/MyInvite'), 
           }
         ]
       },

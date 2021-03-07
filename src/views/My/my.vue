@@ -13,8 +13,8 @@
             v-for="(item, index) in menuList"
             :key="index"
           >
-            <v-list-item-content>
-              <v-list-item-title v-text="item.routeTitle" @click="replaceContent(item.url)"></v-list-item-title>
+            <v-list-item-content @click="replaceContent(item.url)">
+              <v-list-item-title v-text="item.routeTitle"></v-list-item-title>
             </v-list-item-content>
           </v-list-item>
         </v-list-item-group>
@@ -31,7 +31,9 @@
 export default {
   name: 'My',
   mounted() {
-
+    const { path } = this.$route;
+    this.selectedItem = this.menuList.findIndex(i => i.url === path);
+    this.replaceContent(path);
   },
   data() {
     return {
@@ -51,7 +53,8 @@ export default {
   },
   methods: {
     replaceContent(url) {
-      this.$route.path !== url && this.$router.replace(url);
+      console.log(url);
+      this.$router.replace(url);
     }
   }
 }
@@ -65,7 +68,7 @@ $r: mu-my;
 .#{$r} {
   display: flex;
   padding: 20px 50px;
-  height: 100%;
+  height: 600px;
   background-color: #F2F2F2;
   &-left {
     max-width: 200px;
