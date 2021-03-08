@@ -4,9 +4,9 @@
     <template v-if="isLogin" >
       <div class="mu-mygames-topbar">
         <v-card
-          class="mu-mygames-topbar-btn"
+          class="mu-mygames-topbar-btn mu-mygames-topbar-btn1"
           width="300"
-          height="120"
+          height="100"
           dark
           color="primary"
         >
@@ -17,9 +17,9 @@
           <span class="mu-mygames-topbar-title">(0)</span >
         </v-card>
         <v-card
-          class="mu-mygames-topbar-btn"
+          class="mu-mygames-topbar-btn mu-mygames-topbar-btn2"
           width="300"
-          height="120"
+          height="100"
           dark
           color="primary"
         >
@@ -31,9 +31,9 @@
         </v-card
         >
         <v-card
-          class="mu-mygames-topbar-btn"
+          class="mu-mygames-topbar-btn mu-mygames-topbar-btn3"
           width="300"
-          height="120"
+          height="100"
           dark
           color="primary"
         >
@@ -62,7 +62,7 @@
           sm="6"
           md="3"
         >
-          <v-btn color="primary" height="47">搜索</v-btn >
+          <v-btn color="#ffb401" height="47">搜索</v-btn >
         </v-col>
       </div>
       <div class="mu-mygames-list">
@@ -165,12 +165,23 @@ $r: mu-mygames;
   &-topbar {
     padding: 30px 50px;
     &-btn {
+      &.mu-mygames-topbar-btn1 {
+        background: url("../../../assets/img/gameBanner1-695aef5a.png") no-repeat center;
+      }
+      &.mu-mygames-topbar-btn2 {
+        background: url("../../../assets/img/gameBanner2-5f072b6c.png") no-repeat center;
+      }
+      &.mu-mygames-topbar-btn3{
+        background: url("../../../assets/img/gameBanner3-79d0064d.png") no-repeat center;
+      }
       display: inline-block;
       box-sizing: border-box;
-      padding-top: 50px;
-      text-align: center;
+      padding-top: 40px;
+      padding-left: 30px;
+      // text-align: center;
       margin-left: 10px;
       margin-bottom: 10px;
+      background-size: 100% 100%;
     }
     &-title {
       margin-left: 5px;
@@ -184,7 +195,7 @@ $r: mu-mygames;
   // }
   &-input {
     display: flex;
-    padding: 20px 50px;
+    padding: 0px 50px;
   }
   &-list {
     padding: 0 50px;

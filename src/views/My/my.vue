@@ -13,6 +13,7 @@
             v-for="(item, index) in menuList"
             :key="index"
           >
+            <v-icon style="margin-right: 5px">mdi-controller-classic</v-icon >
             <v-list-item-content @click="replaceContent(item.url)">
               <v-list-item-title v-text="item.routeTitle"></v-list-item-title>
             </v-list-item-content>
@@ -71,7 +72,7 @@ $r: mu-my;
   height: 600px;
   background-color: #F2F2F2;
   &-left {
-    max-width: 200px;
+    min-width: 200px;
     min-height: 100%;
   }
   &-right {
