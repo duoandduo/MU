@@ -69,7 +69,8 @@ export default {
   height: 48px;
   .current {
     //   background: #ffb401;
-    background: linear-gradient(90deg, #ff9e4a 0%, #ff3b4e 100%);
+    // background: linear-gradient(90deg, #ff9e4a 0%, #ff3b4e 100%);
+    background: #f2952e;
     height: 100%;
     width: 210px;
     font-weight: 600;
@@ -86,11 +87,11 @@ export default {
     cursor: pointer;
   }
   li:hover {
-    color: #cf2524;
+    color: #f2952e;
     font-weight: 600;
   }
   .active {
-    color: #cf2524;
+    color: #f2952e;
     font-weight: 600;
   }
 }

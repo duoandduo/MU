@@ -29,11 +29,21 @@
       </ul>
       <img src="https://steam.cdn.namejin.com/store/gog2/static/benefit2.d0e16dac.png" alt="" />
     </div>
+    <div class="free_title">游戏免费玩</div>
+    <div class="filter_game">
+        <v-chip  v-for="(item,index) in list" :key="index">{{item}}</v-chip>
+    </div>
   </div>
 </template>
 
 <script>
-  export default {};
+  export default {
+      data(){
+          return {
+              list:['全部','Steam','Epic','Uplay','Origin','Blizaard','Riot']
+          }
+      }
+  };
 </script>
 
 <style lang='scss' scoped>
