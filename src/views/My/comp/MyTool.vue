@@ -48,7 +48,7 @@
           height="70"
       >
       <div class="mu-mytool-card-icon" style="background: #954DD2">
-        <v-icon x-large color="#FFF">epicgames</v-icon >
+        <v-icon x-large color="#FFF">mdi-alpha-e-box</v-icon >
       </div >
       <div class="mu-mytool-card-content">
         <div class="mu-mytool-card-content-title">Epic平台下载</div >
@@ -61,7 +61,7 @@
           height="70"
       >
       <div class="mu-mytool-card-icon" style="background: #24A9F9">
-        <v-icon x-large color="#FFF">mdi-blizzard</v-icon >
+        <v-icon x-large color="#FFF">mdi-battlenet</v-icon >
       </div >
       <div class="mu-mytool-card-content">
         <div class="mu-mytool-card-content-title">Blizzard平台下载</div >

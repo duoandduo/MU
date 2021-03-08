@@ -69,7 +69,7 @@ $r: mu-my;
 .#{$r} {
   display: flex;
   padding: 20px 50px;
-  height: 600px;
+  min-height: 600px;
   background-color: #F2F2F2;
   &-left {
     min-width: 200px;
