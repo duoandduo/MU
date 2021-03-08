@@ -4,8 +4,8 @@
     <template v-if="isLogin" >
       <div class="mu-mywallet-card">
         <span>我的余额 : 0.00 元</span>
-        <v-btn color="#3692FC" small class="mu-mywallet-card-btn" @click="bindDialogVisible = true">我的支付宝</v-btn >
-        <v-btn color="#FFF0E6" small class="mu-mywallet-card-btn">提现</v-btn>
+        <v-btn color="#3692FC" small class="mu-mywallet-card-btn" dark @click="bindDialogVisible = true">我的支付宝</v-btn >
+        <v-btn color="#FFF0E6" small class="mu-mywallet-card-btn" dark>提现</v-btn>
       </div>
       <div class="mu-mywallet-search">
         <v-row>
