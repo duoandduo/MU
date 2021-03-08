@@ -7,7 +7,7 @@
       <v-list>
         <v-list-item-group
         v-model="selectedItem"
-        color="primary"
+        color="#f2952e"
         >
           <v-list-item
             v-for="(item, index) in menuList"

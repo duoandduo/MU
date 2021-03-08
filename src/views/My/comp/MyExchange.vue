@@ -17,7 +17,7 @@
           sm="6"
           md="3"
         >
-          <v-btn color="primary" height="47">兑换</v-btn >
+          <v-btn color="#f2952e" height="47" class="white--text">兑换</v-btn >
         </v-col>
     </v-row>
     <div class="mu-myexchange-header">兑换记录</div>
